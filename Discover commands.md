@@ -1,12 +1,12 @@
 # Discover commands
 
-PowerShell commands use a verb-noun syntax. This makes understanding and remembering \(and guessing\) PowerShell commands easier. Actually, PowerShell has a [list of approved verbs](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx). These can also be viewed in the Shell by running `Get-Verb`.
+PowerShell commands use a verb-noun syntax. This makes understanding and remembering (and guessing) PowerShell commands easier. Actually, PowerShell has a [list of approved verbs](https://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx). These can also be viewed in the Shell by running `Get-Verb`.
 
-\(The verb list that `Get-Verb` returns might not be complete. For an updated list of approved Windows PowerShell verbs with descriptions, see the link above!\)
+(The verb list that `Get-Verb` returns might not be complete. For an updated list of approved Windows PowerShell verbs with descriptions, see the link above!)
 
 I have two main ways of discovering commands. Using `Get-Help` and `Get-Command`.
 
-PowerShell has a excellent help system \(I'll do a post specifically on Get-Help later!\) that provides a detailed description, shows the syntax, shows examples etc. You can search through these help files using wildcards, and that's a really good way of discovering commands.
+PowerShell has a excellent help system (I'll do a post specifically on Get-Help later!) that provides a detailed description, shows the syntax, shows examples etc. You can search through these help files using wildcards, and that's a really good way of discovering commands.
 
 Secondly I'll show how to use `Get-Command`, which is a more straight forward way to list available commands.
 
@@ -68,7 +68,7 @@ You could turn it around and search using the `-Verb` parameter too, for example
 Get-Command -Verb Get
 ```
 
-\(You can read more about wildcards in PowerShell by running `get-help about_wildcards`. Another useful `Get-Help` tip is the `-ShowWindow` parameter, which sometimes makes the help files easier to read.\)
+(You can read more about wildcards in PowerShell by running `get-help about_wildcards`. Another useful `Get-Help` tip is the `-ShowWindow` parameter, which sometimes makes the help files easier to read.)
 
 The point of this post was to describe how I discover commands within PowerShell. Did I miss something? Should I have written/explained something in a different way? Do I seem drunk? Leave a comment!
 
