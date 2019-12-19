@@ -7,10 +7,9 @@ If you want to learn more about Profiles, please see help about_profiles in yo
 The first thing you might want to do is to check if you already have a profile script or not. You can check this by running:
 
 
-
-
-[code language="powershell" light="True"] Test-Path $Profile [/code]
-
+```
+Test-Path $Profile
+```
 
 
 
@@ -18,9 +17,9 @@ If Test-Path $Profile returns False, you don't have a profile created. You can t
 
 
 
-
-[code language="powershell" light="True"] New-Item –Path $Profile –Type File –Force [/code]
-
+```
+New-Item –Path $Profile –Type File –Force
+```
 
 
 
