@@ -1,3 +1,5 @@
+# CSV Files in PowerShell
+
 If you work in IT, you have most likely stumbled upon a CSV-file. CSV stands for Comma-separated values. You can read more about CSV-files <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank" rel="noopener">here</a>.
 
 Two IT-related examples of what data a CSV-file can contain would be a list of AD-users or network traffic. I'll use network traffic as my example. I'm not going to spend more time explaining what a CSV-file is, but I will show you how to read its content with PowerShell!
