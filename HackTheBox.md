@@ -68,3 +68,10 @@ Connect over winrm
 ```
 evil-winrm -u [username] -i [targetIP]
 ```
+Download all files from smbshare
+```
+recurse on
+prompt off
+mask *
+mget *
+```
