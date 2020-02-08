@@ -22,6 +22,9 @@ Help resources:
 
 Portscanning target with nmap
 ```
+nmap -sC -sV [targetIP]
+```
+```
 nmap -A -T4 -p- [targetIP]
 ```
 FTP
