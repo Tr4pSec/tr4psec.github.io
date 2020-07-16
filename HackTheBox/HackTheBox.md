@@ -27,6 +27,21 @@ nmap -sC -sV [targetIP]
 ```
 nmap -A -T4 -p- [targetIP]
 ```
+nmap for when you see rpcbind
+```
+nmap -sV --script=nfs-showmount [targetIP]
+```
+Show shares
+```
+showmount -e [targetIP]
+```
+
+Mount a share
+```
+mount -t nfs [targetIP]:/[sharepath] /[localmountpath]
+```
+
+
 FTP
 ```
 ftp [targetIP]
