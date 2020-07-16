@@ -71,6 +71,11 @@ Connect over winrm
 ```
 evil-winrm -u [username] -i [targetIP]
 ```
+Connect over winrm, but with access to a folder and its files
+```
+evil-winrm -i [targetIP] -u USER -p PASSWORD -s /usr/share/windows-resources/powersploit/Privesc/
+```
+
 Download all files from smbshare
 ```
 recurse on
