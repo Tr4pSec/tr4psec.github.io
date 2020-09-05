@@ -4,6 +4,8 @@ Hack The Box is an online platform allowing you to test your penetration testing
 
 <img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
 
+:)
+
 Link to HTB: \
 [http://hackthebox.eu/](http://hackthebox.eu/) 
 
