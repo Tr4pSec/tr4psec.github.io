@@ -5,6 +5,8 @@
 
 ![GitHub followers](https://img.shields.io/github/followers/Tr4pSec?style=social) ![GitHub User's stars](https://img.shields.io/github/stars/Tr4pSec?style=social) ![Visitor](https://visitor-badge.laobi.icu/badge?page_id=Tr4pSec.tr4psec.github.io) <img src="https://komarev.com/ghpvc/?username=Tr4pSec" alt="Tr4pSec" />
 
+This website is my personal note-dump, mostly Cyber related. 
+
 ## About Me 🕵️:
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
