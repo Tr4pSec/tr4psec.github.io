@@ -31,7 +31,7 @@
 
 <br>
 
-<img src="https://img.icons8.com/color/48/powershell.png"/> <img src="https://img.icons8.com/color/48/splunk.png"/> <img src="https://img.icons8.com/color/48/microsoft.png"/> <img src="https://img.icons8.com/color/48/linux.png"/>  <img src="https://img.icons8.com/color/48/windows-defender.png"/>
+<img src="https://img.icons8.com/color/48/powershell.png"/> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg?20170816142847" width="100"/> <img src="https://img.icons8.com/color/48/microsoft.png"/> <img src="https://img.icons8.com/color/48/linux.png"/>  <img src="https://img.icons8.com/color/48/windows-defender.png"/>
 
 <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/48/external-forensics-police-flaticons-lineal-color-flat-icons-3.png"/> <img src="https://img.icons8.com/dusk/48/hacking.png"/> <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/48/external-firewall-cybersecurity-and-data-privacy-parzival-1997-outline-color-parzival-1997.png">
 
