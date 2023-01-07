@@ -5,7 +5,11 @@ branding:
   title: Max
   label: Docs
 links:
+- text: Home
+  link: https://www.cyberbin.io
 - text: Twitter
   link: https://twitter.com/tr4psec
+- text: GitHub
+  link: https://github.com/tr4psec
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
