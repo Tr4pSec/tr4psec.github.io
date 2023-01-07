@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>CSV Files in PowerShell</title>
-    <meta name="title" content="CSV Files in PowerShell">
-    <meta name="description" content="If you work in IT, you have most likely stumbled upon a CSV-file. CSV stands for Comma-separated values. You can read more about CSV-files" />
+    <title>Troubleshooting boot times in Linux</title>
+    <meta name="title" content="Troubleshooting boot times in Linux">
+    <meta name="description" content="My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it. This is what I found:" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/powershell/csv_files_in_powershell/" />
+    <link rel="canonical" href="/linux/troubleshooting-boot-times/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/powershell/csv_files_in_powershell/">
-    <meta property="og:title" content="CSV Files in PowerShell">
-    <meta property="og:description" content="If you work in IT, you have most likely stumbled upon a CSV-file. CSV stands for Comma-separated values. You can read more about CSV-files">
+    <meta property="og:url" content="/linux/troubleshooting-boot-times/">
+    <meta property="og:title" content="Troubleshooting boot times in Linux">
+    <meta property="og:description" content="My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it. This is what I found:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/powershell/csv_files_in_powershell/">
-    <meta property="twitter:title" content="CSV Files in PowerShell">
-    <meta property="twitter:description" content="If you work in IT, you have most likely stumbled upon a CSV-file. CSV stands for Comma-separated values. You can read more about CSV-files">
+    <meta property="twitter:url" content="/linux/troubleshooting-boot-times/">
+    <meta property="twitter:title" content="Troubleshooting boot times in Linux">
+    <meta property="twitter:description" content="My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it. This is what I found:">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -166,57 +166,20 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="csv-files-in-powershell" class="break-words">
+<doc-anchor-target id="troubleshooting-boot-times-in-linux" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#csv-files-in-powershell">#</doc-anchor-trigger>
-        <span>CSV Files in PowerShell</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting-boot-times-in-linux">#</doc-anchor-trigger>
+        <span>Troubleshooting boot times in Linux</span>
     </h1>
 </doc-anchor-target>
-<p>If you work in IT, you have most likely stumbled upon a CSV-file. CSV stands for Comma-separated values. You can read more about CSV-files <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank" rel="noopener">here</a>.</p>
-<p>Two IT-related examples of what data a CSV-file can contain would be a list of AD-users or network traffic. I&#x27;ll use network traffic as my example. I&#x27;m not going to spend more time explaining what a CSV-file is, but I will show you how to read its content with PowerShell!</p>
-<p>Please take note that everything in this post is done with PowerShell.exe, and some examples might not work in ISE or VSCode.</p>
-<p>Let&#x27;s say you got a file called traffic.csv. The raw content of the file looks like this:</p>
-<img class="alignnone size-full wp-image-87" src="https://tr4psec.files.wordpress.com/2018/07/csv11.png" width="357" height="217">
-<p>In this case the file is located under <code v-pre>$home\documents\traffic.csv</code></p>
-<p>In order to read this CSV-file in PowerShell, we&#x27;ll have to use the <code v-pre>Import-CSV</code> cmdlet. If you don&#x27;t know how to discover PowerShell commands, you can read about that in my previous post Discover Commands.</p>
-<p>There is a twist tho. First we need to create a variable that we assign the <code v-pre>Import-CSV</code> command to. By storing the output objects in a variable, we can more easily play around with the data:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$data = Import-Csv .\traffic.csv -Delimiter &quot;,&quot;</code></pre>
-</doc-codeblock></div>
-<p>The parameter that we are adding is <code v-pre>-Delimiter</code>, delimiter is saying what character is separating the data within the CSV-file. In our example it&#x27;s a comma.</p>
-<p>Now if we just run our variable <code v-pre>$data</code> we&#x27;ll see the contents of the file.</p>
-<img class="alignnone size-full wp-image-88" src="https://tr4psec.files.wordpress.com/2018/07/data1.png" width="343" height="220">
-<p>If we pipe our <code v-pre>$data</code> variable into <code v-pre>Get-Member</code> we can see what kind of properties and methods we have available. (Properties being the most interesting right now.)</p>
-<img class="alignnone size-full wp-image-89" src="https://tr4psec.files.wordpress.com/2018/07/data2gm.png" width="519" height="314">
-<p>Notice that <code v-pre>sourceIP</code>, <code v-pre>destinationIP</code>, <code v-pre>port</code> and <code v-pre>action</code> are all available for us to play with. If you don&#x27;t know how, check out my previous post Filtering and using Comparison operators in PowerShell.</p>
-<p>Back to our CSV-file: :Let&#x27;s say that we only want to display the events where the traffic was allowed. We would then run:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$data | Where-Object {$_.action -eq 'Allow'}</code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-90" src="https://tr4psec.files.wordpress.com/2018/07/csv2.png" width="444" height="202">
-<p>What if we want to see all the traffic that is <code v-pre>not</code> on port 80?</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$data | Where-Object {$_.port -ne '80'}</code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-91" src="https://tr4psec.files.wordpress.com/2018/07/csv3.png" width="377" height="137">
-<p>(Again, if you don&#x27;t know what <code v-pre>{$_.port -ne '80'}</code> means, check out my previous post.)</p>
-<p>Besides using <code v-pre>Where-Object</code> to filter out the data, you can also use <code v-pre>Sort-Object </code>to sort the data. Say we wanted to sort on the action property. We would run this:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$data | Sort-Object -Property action</code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-92" src="https://tr4psec.files.wordpress.com/2018/07/csv4.png" width="381" height="235">
-<p>You can also use <code v-pre>Select-Object</code> to select the properties you&#x27;d like:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$data | Select-Object -Property destinationIP,port </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-101" src="https://tr4psec.files.wordpress.com/2018/07/csv6.png" width="472" height="235">
-<p>You can also combine these cmdlets:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$data | Where-Object {$_.destinationIP -like &quot;*0.0.1&quot;} | Sort-Object -Property action,port</code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-93" src="https://tr4psec.files.wordpress.com/2018/07/csv5.png" width="765" height="207">
-<p>Alright. That was my very short, but very straight forward write-up on how to read CSV-files in PowerShell. I hope you found this post helpful.</p>
-<p>// Tr4p</p>
+<p>My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it.
+This is what I found:</p>
+<p>You can run <code v-pre>systemd-analyze</code> to see startup information:</p>
+<p>You can also run <code v-pre>systemd-analyze blame</code> to see what took the most time.</p>
+<p>The <code v-pre>systemctl</code> command showed me an error about a service failing.</p>
+<p>In my case there was a service called <code v-pre>systemd-udev-settle</code> that loaded forever until it failed.</p>
+<p>I searched online and found out that this service wasn&#x27;t needed for the system to run. So I found a command to &quot;disable it&quot;: <code v-pre>sudo systemctl mask systemd-udev-settle</code></p>
+<p>This fixed my super long boot time <span class="docs-emoji">&#x1F44D;</span></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -226,20 +189,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/profile/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../hackthebox/hackthebox/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Creating your own Power​Shell profile</span>
+                                                <span class="block mt-1">Hack​The​Box</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/discover_commands/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/profile/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Discover commands</span>
+                                                <span class="block mt-1">Creating your own Power​Shell profile</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -283,6 +246,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "CSV Files in PowerShell", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Troubleshooting boot times in Linux", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
