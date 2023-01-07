@@ -1,1 +1,0 @@
-# Han er backup ansvarlig
