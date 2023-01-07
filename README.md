@@ -5,13 +5,17 @@
 
 ![GitHub followers](https://img.shields.io/github/followers/Tr4pSec?style=social) ![GitHub User's stars](https://img.shields.io/github/stars/Tr4pSec?style=social) ![Visitor](https://visitor-badge.laobi.icu/badge?page_id=Tr4pSec.tr4psec.github.io) <img src="https://komarev.com/ghpvc/?username=Tr4pSec" alt="Tr4pSec" />
 
-## About Me :
+## About Me 🕵️:
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
 - 🏢 Former **Security Incident Handler** at [KONGSBERG Gruppen](https://www.kongsberg.com/)
-- 🎓 GIAC Certified Forensic Analyst [Badge](https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url)
+- 🎓 GIAC Certified Forensic Analyst [Badge](https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url) 
 - 🎓 GIAC Penetration Tester [Badge](https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url)
 - 🏡 Lives in **Norway**
+
+<br>
+
+[<img src="https://images.credly.com/size/110x110/images/7148df07-dff6-44c7-a39e-1db1e295a138/Template_GCFA.png" width="80">](https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url) [<img src="https://images.credly.com/size/110x110/images/3951004e-93d8-4d99-8ba7-441b7b709454/Template_GPEN.png" width="80">](https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url)
 
 <br>
 
