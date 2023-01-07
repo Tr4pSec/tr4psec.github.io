@@ -4,8 +4,11 @@ My Linux Mint installation took forever to boot one day, and I had to figure out
 This is what I found:
 
 You can run ``` systemd-analyze ``` to see startup information: 
+<img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Screenshot%20from%202023-01-07%2020-00-17.png">
 
 You can also run ``` systemd-analyze blame ``` to see what took the most time.
+
+<img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Screenshot%20from%202023-01-07%2020-01-39.png">
 
 The ``` systemctl ``` command showed me an error about a service failing.
 
