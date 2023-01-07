@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726433619265">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726433821633">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -14,27 +14,27 @@
     <meta name="description" content="My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it. This is what I found:" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="/linux/troubleshooting-boot-times/" />
+    <link rel="canonical" href="https://www.cyberbin.io/linux/troubleshooting-boot-times/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/linux/troubleshooting-boot-times/">
+    <meta property="og:url" content="https://www.cyberbin.io/linux/troubleshooting-boot-times/">
     <meta property="og:title" content="Troubleshooting boot times in Linux">
     <meta property="og:description" content="My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it. This is what I found:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/linux/troubleshooting-boot-times/">
+    <meta property="twitter:url" content="https://www.cyberbin.io/linux/troubleshooting-boot-times/">
     <meta property="twitter:title" content="Troubleshooting boot times in Linux">
     <meta property="twitter:description" content="My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it. This is what I found:">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.726433619265" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.726433821633" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726433619265" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726433821633" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726433619265" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726433821633" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -174,8 +174,10 @@
 </doc-anchor-target>
 <p>My Linux Mint installation took forever to boot one day, and I had to figure out how to solve it.
 This is what I found:</p>
-<p>You can run <code v-pre>systemd-analyze</code> to see startup information:</p>
+<p>You can run <code v-pre>systemd-analyze</code> to see startup information:
+<img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Screenshot%20from%202023-01-07%2020-00-17.png"></p>
 <p>You can also run <code v-pre>systemd-analyze blame</code> to see what took the most time.</p>
+<img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Screenshot%20from%202023-01-07%2020-01-39.png">
 <p>The <code v-pre>systemctl</code> command showed me an error about a service failing.</p>
 <p>In my case there was a service called <code v-pre>systemd-udev-settle</code> that loaded forever until it failed.</p>
 <p>I searched online and found out that this service wasn&#x27;t needed for the system to run. So I found a command to &quot;disable it&quot;: <code v-pre>sudo systemctl mask systemd-udev-settle</code></p>
