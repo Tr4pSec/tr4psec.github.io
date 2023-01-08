@@ -2,13 +2,18 @@
 
 
 Extracting hidden files with StegHide:
-``` steghide extract -sf file.jpg -p "password" ```
+``` 
+steghide extract -sf file.jpg -p "password" 
+```
 
 Extracting strings:
-``` strings file.wav | awk 'length($0)>8' ```
+``` 
+strings file.wav | awk 'length($0)>8' 
+```
 
 Python Script for extracting data from audio streams:
 Ref https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3
+
 ``` python3 ./test.py ```
 
 ```python 
