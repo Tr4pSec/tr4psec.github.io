@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Objects in PowerShell</title>
-    <meta name="title" content="Objects in PowerShell">
-    <meta name="description" content="PowerShell is full of objects. And dealing with different types of objects is something you'll spend a lot of time doing if you want to get into..." />
+    <title>Linux Logs:</title>
+    <meta name="title" content="Linux Logs:">
+    <meta name="description" content="This log file contains generic system activity logs. It is mainly used to store informational and non-critical system messages." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.cyberbin.io/powershell/objects_in_powershell/" />
+    <link rel="canonical" href="https://www.cyberbin.io/dfir/linux-logs/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cyberbin.io/powershell/objects_in_powershell/">
-    <meta property="og:title" content="Objects in PowerShell">
-    <meta property="og:description" content="PowerShell is full of objects. And dealing with different types of objects is something you'll spend a lot of time doing if you want to get into...">
+    <meta property="og:url" content="https://www.cyberbin.io/dfir/linux-logs/">
+    <meta property="og:title" content="Linux Logs:">
+    <meta property="og:description" content="This log file contains generic system activity logs. It is mainly used to store informational and non-critical system messages.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cyberbin.io/powershell/objects_in_powershell/">
-    <meta property="twitter:title" content="Objects in PowerShell">
-    <meta property="twitter:description" content="PowerShell is full of objects. And dealing with different types of objects is something you'll spend a lot of time doing if you want to get into...">
+    <meta property="twitter:url" content="https://www.cyberbin.io/dfir/linux-logs/">
+    <meta property="twitter:title" content="Linux Logs:">
+    <meta property="twitter:description" content="This log file contains generic system activity logs. It is mainly used to store informational and non-critical system messages.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -178,57 +178,292 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="objects-in-powershell" class="break-words">
+<doc-anchor-target id="linux-logs" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#objects-in-powershell">#</doc-anchor-trigger>
-        <span>Objects in PowerShell</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#linux-logs">#</doc-anchor-trigger>
+        <span>Linux Logs:</span>
     </h1>
 </doc-anchor-target>
-<p>PowerShell is full of objects. And dealing with different types of objects is something you&#x27;ll spend a lot of time doing if you want to get into PowerShell.</p>
-<p>But what really are objects in PowerShell? The answer is &quot;pretty much everything&quot;.</p>
-<p>Every command you run in PowerShell returns an object, or an array of objects. If you don&#x27;t know what an array is, it&#x27;s basically a data type that contains a group of objects. You have tons of different types of objects. Don&#x27;t think too hard about different object types, just know that every &quot;type&quot; of object is different. I&#x27;ll show you how to check what kind of object you&#x27;re dealing with.</p>
-<p>So, every time you run a command in PowerShell, it returns an object. And that object has an object-type, properties and methods. Properties is something that describes the object, methods are &quot;actions&quot; or code that you can execute against the object.</p>
-<p>Time for an example! Let&#x27;s create a variable called test and then assign a string to that variable:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test = &quot;This is a string.&quot; </code></pre>
-</doc-codeblock></div>
-<p>Now if we just run <code v-pre>$Test</code> in our Shell, PowerShell returns &quot;This is a string.&quot;.</p>
-<img class="alignnone size-full wp-image-46" src="https://tr4psec.files.wordpress.com/2018/06/teststring.png" width="284" height="139" />
-<p>Now I&#x27;m going to show you the most important command of them all:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Get-Member </code></pre>
-</doc-codeblock></div>
-<p>When you pipe something into <code v-pre>Get-Member</code>, PowerShell is gonna spit out what type of object you&#x27;re dealing with, all the methods, and all the properties of the object.</p>
-<p>So let&#x27;s pipe our <code v-pre>$Test</code> variable into <code v-pre>Get-Member</code> and see what we&#x27;re dealing with:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test | Get-Member </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-47" src="https://tr4psec.files.wordpress.com/2018/06/testgm.png" width="695" height="262" />
-<p>First thing we see is the <code v-pre>TypeName</code>. This is basically telling you what type of object you&#x27;re dealing with. A <code v-pre>System.String object</code>. Or just a String object for short.</p>
-<p>Next <code v-pre>Get-Member</code> lists all the Methods and Properties of the object.</p>
-<img class="alignnone size-full wp-image-48" src="https://tr4psec.files.wordpress.com/2018/06/testgm2.png" width="311" height="962" />
-<p>So let&#x27;s first focus on the Properties of our String Object. As you can see in the very long list above, this object only has one Property: <code v-pre>Length</code>. You can invoke properties by writing:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test.Length </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-49" src="https://tr4psec.files.wordpress.com/2018/06/lenght.png" width="195" height="105" />
-<p>Methods are invoked the same way, but they end with a <code v-pre>( )</code> after the method name. Some methods require input inside the <code v-pre>( )</code>.</p>
-<p>Let&#x27;s try the <code v-pre>ToUpper</code> method:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test.ToUpper() </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-50" src="https://tr4psec.files.wordpress.com/2018/06/toupper.png" width="224" height="208" />
-<p>See what our <code v-pre>ToUpper</code> method did to our string?</p>
-<p>Now listen, calling a method on a object does not change the object itself. It merely outputs a new modified version of the object. That means if you run <code v-pre>$Test</code> again after previously running the <code v-pre>ToUpper</code> method, you&#x27;ll see that your string remains unchanged.</p>
-<p>If your goal was to actually change the object stored in the <code v-pre>$Test</code> variable, you would have to declare it again like this:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test = $Test.ToUpper() </code></pre>
-</doc-codeblock></div>
-<p>Now your <code v-pre>$Test</code> would look a bit different:</p>
-<img class="alignnone size-full wp-image-51" src="https://tr4psec.files.wordpress.com/2018/06/touppernew.png" width="267" height="210" />
-<p>Using <code v-pre>Get-Help </code>and <code v-pre>Get-Command </code>from my previous post Discover commands combined with looking at the Object type, properties and methods using <code v-pre>Get-Member </code>should make you a pretty great PowerShell explorer!</p>
-<p>This is my first time trying to explain objects in PowerShell in writing. If any of this didn&#x27;t make sense, please let me know! I&#x27;ll answer any question you might have on Twitter!</p>
-<p>// Tr4p</p>
+<doc-anchor-target id="varlogmessages">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogmessages">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/messages</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here">#</doc-anchor-trigger>
+        <span>What’s logged here?:</span>
+    </h3>
+</doc-anchor-target>
+<p>This log file contains generic system activity logs.
+It is mainly used to store informational and non-critical system messages.
+In Debian-based systems,  /var/log/syslog directory serves the same purpose.</p>
+<doc-anchor-target id="how-can-i-use-these-logs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>Here you can track non-kernel boot errors, application-related service errors and the messages that are logged during system startup.
+This is the first log file that the Linux administrators should check if something goes wrong.
+For example, you are facing some issues with the sound card. To check if something went wrong during the system startup process, you can have a look at the messages stored in this log file. </p>
+<doc-anchor-target id="varlogauthlog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogauthlog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/auth.log</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-1">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>All authentication related events in Debian and Ubuntu server are logged here.
+If you’re looking for anything involving the user authorization mechanism, you can find it in this log file.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-1">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>Suspect that there might have been a security breach in your server? Notice a suspicious javascript file where it shouldn’t be? If so, then find this log file asap!</p>
+<p>Investigate failed login attempts
+Investigate brute-force attacks and other vulnerabilities related to user authorization mechanism.</p>
+<doc-anchor-target id="varlogsecure">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogsecure">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/secure</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="redhat-and-centos-based-systems-use-this-log-file-instead-of-var-log-auth-log">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#redhat-and-centos-based-systems-use-this-log-file-instead-of-var-log-auth-log">#</doc-anchor-trigger>
+        <span>RedHat and CentOS based systems use this log file instead of /var/log/auth.log. </span>
+    </h3>
+</doc-anchor-target>
+<p>It is mainly used to track the usage of authorization systems.
+It stores all security related messages including authentication failures.
+It also tracks sudo logins, SSH logins and other errors logged by system security services daemon.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-2">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>All user authentication events are logged here.
+This log file can provide detailed insight about unauthorized or failed login attempts
+Can be very useful to detect possible hacking attempts.
+It also stores information about successful logins and tracks the activities of valid users.</p>
+<doc-anchor-target id="varlogbootlog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogbootlog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/boot.log</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-2">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>The system initialization script, /etc/init.d/bootmisc.sh, sends all bootup messages to this log file
+This is the repository of booting related information and messages logged during system startup process.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-3">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-3">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>You should analyze this log file to investigate issues related to improper shutdown, unplanned reboots or booting failures.
+Can also be useful to determine the duration of system downtime caused by an unexpected shutdown.</p>
+<doc-anchor-target id="varlogdmesg">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogdmesg">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/dmesg</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-3">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-3">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>This log file contains Kernel ring buffer messages.
+Information related to hardware devices and their drivers are logged here.
+As the kernel detects physical hardware devices associated with the server during the booting process, it captures the device status, hardware errors and other generic messages.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-4">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-4">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>This log file is useful for dedicated server customers mostly.
+If a certain hardware is functioning improperly or not getting detected, then you can rely on this log file to troubleshoot the issue.
+Or, you can purchase a managed server from us and we’ll monitor it for you.</p>
+<doc-anchor-target id="varlogkernlog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogkernlog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/kern.log</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-4">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-4">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>This is a very important log file as it contains information logged by the kernel.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-5">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-5">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>Perfect for troubleshooting kernel related errors and warnings.
+Kernel logs can be helpful to troubleshoot a custom-built kernel.
+Can also come handy in debugging hardware and connectivity issues.</p>
+<doc-anchor-target id="varlogfaillog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogfaillog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/faillog</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-5">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-5">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>This file contains information on failed login attempts.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-6">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-6">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>It can be a useful log file to find out any attempted security breaches involving username/password hacking and brute-force attacks.</p>
+<doc-anchor-target id="varlogcron">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogcron">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/cron</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-6">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-6">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>This log file records information on cron jobs.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-7">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-7">#</doc-anchor-trigger>
+        <span>How can I use these logs</span>
+    </h3>
+</doc-anchor-target>
+<p>Whenever a cron job runs, this log file records all relevant information including successful execution and error messages in case of failures.
+If you’re having problems with your scheduled cron, you need to check out this log file.</p>
+<doc-anchor-target id="varlogyumlog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogyumlog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/yum.log</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-7">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-7">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>It contains the information that is logged when a new package is installed using the yum command.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-8">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-8">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>Track the installation of system components and software packages.
+Check the messages logged here to see whether a package was correctly installed or not.
+Helps you troubleshoot issues related to software installations.</p>
+<p>Suppose your server is behaving unusually and you suspect a recently installed software package to be the root cause for this issue. In such cases, you can check this log file to find out the packages that were installed recently and identify the malfunctioning program. </p>
+<doc-anchor-target id="varlogmaillog-or-varlogmaillog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogmaillog-or-varlogmaillog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/maillog or /var/log/mail.log</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-8">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-8">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>All mail server related logs are stored here.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-9">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-9">#</doc-anchor-trigger>
+        <span>How can I use these logs?</span>
+    </h3>
+</doc-anchor-target>
+<p>Find information about postfix, smtpd, MailScanner, SpamAssassain or any other email related services running on the mail server.
+Track all the emails that were sent or received during a particular period
+Investigate failed mail delivery issues.
+Get information about possible spamming attempts blocked by the mail server.
+Trace the origin of an incoming email by scrutinizing this log file.</p>
+<doc-anchor-target id="varloghttpd">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varloghttpd">#</doc-anchor-trigger>
+        <span><code v-pre>var/log/httpd/</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-9">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-9">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>This directory contains the logs recorded by the Apache server.
+Apache server logging information are stored in two different log files – error_log and access_log.</p>
+<doc-anchor-target id="how-can-i-use-these-logs-10">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-these-logs-10">#</doc-anchor-trigger>
+        <span>How can I use these logs?:</span>
+    </h3>
+</doc-anchor-target>
+<p>The error_log contains messages related to httpd errors such as memory issues and other system related errors.
+This is the place where Apache server writes events and error records encountered while processing httpd requests.
+If something goes wrong with the Apache webserver, check this log for diagnostic information.
+Besides the error-log file, Apache also maintains a separate list of access_log.
+All access requests received over HTTP are stored in the access_log file.
+Helps you keep track of every page served and every file loaded by Apache.
+Logs the IP address and user ID of all clients that make connection requests to the server.
+Stores information about the status of the access requests, – whether a response was sent successfully or the request resulted in a failure.</p>
+<doc-anchor-target id="varlogmysqldlog-or-varlogmysqllog">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#varlogmysqldlog-or-varlogmysqllog">#</doc-anchor-trigger>
+        <span><code v-pre>/var/log/mysqld.log or /var/log/mysql.log</code></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="whats-logged-here-10">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#whats-logged-here-10">#</doc-anchor-trigger>
+        <span>What’s logged here?</span>
+    </h3>
+</doc-anchor-target>
+<p>As the name suggests, this is the MySQL log file.
+All debug, failure and success messages related to the [mysqld] and [mysqld_safe] daemon are logged to this file.
+RedHat, CentOS and Fedora stores MySQL logs under  /var/log/mysqld.log, while Debian and Ubuntu maintains the log in /var/log/mysql.log directory.</p>
+<doc-anchor-target id="how-can-i-use-this-log">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-can-i-use-this-log">#</doc-anchor-trigger>
+        <span>How can I use this log?</span>
+    </h3>
+</doc-anchor-target>
+<p>Use this log to identify problems while starting, running, or stopping mysqld.
+Get information about client connections to the MySQL data directory
+You can also setup ‘long_query_time’ parameter to log information about query locks and slow running queries.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -238,20 +473,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/how_to_create_pscustomobject/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../dfir/autopsy/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">How to create a PS​Custom​Object</span>
+                                                <span class="block mt-1">Autopsy</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/azure/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../dfir/linux-notes/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Using the Azure module in Power​Shell</span>
+                                                <span class="block mt-1">Linux Notes</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -295,6 +530,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Objects in PowerShell", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Linux Logs:", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
