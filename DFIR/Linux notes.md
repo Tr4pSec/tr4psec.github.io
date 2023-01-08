@@ -1,5 +1,8 @@
 # Linux Notes
 
+Compromise assessment Cheat Sheet:
+https://sandflysecurity.com/linux-compromise-detection-command-cheatsheet.pdf
+
 Checking for active network connections
 ```
 netstat -all
@@ -23,4 +26,18 @@ cat /proc/type_PID_here/status
 ps -p $PID -o pid,vsz=MEMORY -o user,group=GROUP -o comm,args=ARGS
 ```
 
+Parsing logs:
+```
+find . -name "*.log" | xargs grep -E 'fatal|error|critical|failure|warning|'
+```
+```
+egrep -r "string1|string2" pathname
+```
+```
+journalctl | grep string
+```
+Parsing .gz logs:
+```
+zcat *.gz
+```
 

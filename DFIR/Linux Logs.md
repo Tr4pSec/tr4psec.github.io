@@ -1,4 +1,4 @@
-# Linux Logs:
+# Linux Logs
 
 ## ``` /var/log/messages ```
 
