@@ -14,6 +14,9 @@ This website is my personal note-dump, mostly Cyber related.
 - 🎓 GIAC Certified Forensic Analyst [Badge](https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url) 
 - 🎓 GIAC Penetration Tester [Badge](https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url)
 - 🏡 Lives in **Norway**
+- 🛡️ [BlueTeamLabs Profile](https://blueteamlabs.online/public/user/tr4psec)
+- <img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
+
 
 <br>
 
