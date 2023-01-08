@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726434977104">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726496817910">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Comming 2</title>
-    <meta name="title" content="Comming 2">
-    <meta name="description" content="Another test!" />
+    <title>BlueTeamLabs</title>
+    <meta name="title" content="BlueTeamLabs">
+    <meta name="description" content="Extracting hidden files with StegHide: steghide extract -sf file.jpg -p password" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.cyberbin.io/dfir/comming-2/" />
+    <link rel="canonical" href="https://www.cyberbin.io/ctf/blueteamlabs/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cyberbin.io/dfir/comming-2/">
-    <meta property="og:title" content="Comming 2">
-    <meta property="og:description" content="Another test!">
+    <meta property="og:url" content="https://www.cyberbin.io/ctf/blueteamlabs/">
+    <meta property="og:title" content="BlueTeamLabs">
+    <meta property="og:description" content="Extracting hidden files with StegHide: steghide extract -sf file.jpg -p password">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cyberbin.io/dfir/comming-2/">
-    <meta property="twitter:title" content="Comming 2">
-    <meta property="twitter:description" content="Another test!">
+    <meta property="twitter:url" content="https://www.cyberbin.io/ctf/blueteamlabs/">
+    <meta property="twitter:title" content="BlueTeamLabs">
+    <meta property="twitter:description" content="Extracting hidden files with StegHide: steghide extract -sf file.jpg -p password">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.726434977104" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.726496817910" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726434977104" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726496817910" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726434977104" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726496817910" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.726496817910" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -178,13 +179,41 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="comming-2" class="break-words">
+<doc-anchor-target id="blueteamlabs" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#comming-2">#</doc-anchor-trigger>
-        <span>Comming 2</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#blueteamlabs">#</doc-anchor-trigger>
+        <span>BlueTeamLabs</span>
     </h1>
 </doc-anchor-target>
-<p>Another test!</p>
+<p>Extracting hidden files with StegHide:
+<code v-pre>steghide extract -sf file.jpg -p &quot;password&quot;</code></p>
+<p>Extracting strings:
+<code v-pre>strings file.wav | awk 'length($0)&gt;8'</code></p>
+<p>Python Script for extracting data from audio streams:
+Ref <a href="https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3">https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3</a>
+<code v-pre>python3 ./test.py</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-python"><code v-pre class="language-python">import wave
+import struct
+wav = wave.open(&quot;file.wav&quot;, mode='rb')
+frame_bytes = bytearray(list(wav.readframes(wav.getnframes())))
+shorts = struct.unpack('H'*(len(frame_bytes)//2), frame_bytes)
+
+extracted_left = shorts[::2] 
+extracted_right = shorts[1::2]
+
+extractedLSB = &quot;&quot;
+for i in range(0, len(extracted_left)):
+    extractedLSB += (str(extracted_left[i] &amp; 1)) if i%2==0 else(str(extracted_right[i] &amp; 1))
+    
+string_blocks = (extractedLSB[i:i+8] for i in range(0, len(extractedLSB), 8))
+decoded = ''.join(chr(int(char, 2)) for char in string_blocks)
+print(decoded[0:500])
+
+wav.close()</code></pre>
+</doc-codeblock></div>
+<p>Morse Code Decoder:
+<a href="https://morsecode.world/international/decoder/audio-decoder-expert.html">https://morsecode.world/international/decoder/audio-decoder-expert.html</a></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -194,20 +223,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../dfir/comming/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Comming</span>
+                                                <span class="block mt-1">README</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../linux/troubleshooting-boot-times/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ctf/hackthebox/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Troubleshooting boot times in Linux</span>
+                                                <span class="block mt-1">Hack​The​Box</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -251,6 +280,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Comming 2", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "BlueTeamLabs", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
