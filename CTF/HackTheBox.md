@@ -22,6 +22,9 @@ Help resources:
 
 ### Kali Linux commands
 
+Cracking zipfile with fcrackzip:
+``` fcrackzip -D -p ~/Downloads/rockyou.txt noise_samples.zip ```
+
 Portscanning target with nmap
 ```
 nmap -sC -sV [targetIP]
