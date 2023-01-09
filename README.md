@@ -8,10 +8,10 @@
 This website is my personal note-dump, mostly Cyber related. 
 
 
-## <picture><img src = "https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width = 50px></picture> **About me**
+## <img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50px>**About me**
 
 
-<picture> <img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width = 250px></picture>
+<img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px>
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
 - 🏢 Former **Security Incident Handler** at [KONGSBERG Gruppen](https://www.kongsberg.com/)
@@ -27,13 +27,14 @@ This website is my personal note-dump, mostly Cyber related.
 <br>
 <br>
 
-
+<img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px>
 
 
 <br>
 <div align="center">
 
 ## <img src="https://media3.giphy.com/media/2jarCOmpRRKd5PpB7i/giphy.gif?cid=ecf05e474hlf6juyfl6k0y9lfihvcnvoi3bzq3dquipwtcer&rid=giphy.gif" width ="25"><b> Connect with me</b>
+---
 <br>
 
 
@@ -61,6 +62,7 @@ This website is my personal note-dump, mostly Cyber related.
 <br>
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Skills</b>
+---
 <br>
 
 <img src="https://img.icons8.com/color/48/powershell.png"/> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg?20170816142847" width="100"/> <img src="https://img.icons8.com/color/48/microsoft.png"/> <img src="https://img.icons8.com/color/48/linux.png"/>  <img src="https://img.icons8.com/color/48/windows-defender.png"/>
@@ -72,13 +74,14 @@ This website is my personal note-dump, mostly Cyber related.
 <br>
 
 ## <img src="https://media0.giphy.com/media/TBf2czxR420jCORE0o/giphy.gif?cid=ecf05e470b86naywa55090ja49rf1a4o2j1gjvto0gil362f&rid=giphy.gif" width ="25"><b> GitHub stats</b>
+---
 
 <br>
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Tr4pSec&theme=algolia)](https://github.com/Tr4pSec/github-readme-stats) 
 <br>
 
-#
+
 
 ---
 
