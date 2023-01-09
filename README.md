@@ -7,7 +7,7 @@
 
 This website is my personal note-dump, mostly Cyber related. 
 
-
+<div>
 ## <img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50px>**About me**
 
 
@@ -21,13 +21,12 @@ This website is my personal note-dump, mostly Cyber related.
 - 🛡️ [BlueTeamLabs Profile](https://blueteamlabs.online/public/user/tr4psec)
 
 <img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
+</div>
 
 <br>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
 <br>
 <br>
-
-<img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px>
 
 
 <br>
