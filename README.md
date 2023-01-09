@@ -10,6 +10,7 @@ This website is my personal note-dump, mostly Cyber related.
 
 ## <picture><img src = "https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width = 50px></picture> **About me**
 
+
 <picture> <img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width = 250px></picture>
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
@@ -21,20 +22,21 @@ This website is my personal note-dump, mostly Cyber related.
 
 <img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
 
-<br><br>
-
+<br>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
+<br>
+<br>
+
 
 
 
 <br>
-
-[<img src="https://images.credly.com/size/110x110/images/7148df07-dff6-44c7-a39e-1db1e295a138/Template_GCFA.png" width="80">](https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url) [<img src="https://images.credly.com/size/110x110/images/3951004e-93d8-4d99-8ba7-441b7b709454/Template_GPEN.png" width="80">](https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url)
-
-<br>
-
-## Connect with me
 <div align="center">
+
+## <img src="https://media3.giphy.com/media/2jarCOmpRRKd5PpB7i/giphy.gif?cid=ecf05e474hlf6juyfl6k0y9lfihvcnvoi3bzq3dquipwtcer&rid=giphy.gif" width ="25"><b> Connect with me</b>
+<br>
+
+
 <a href="https://github.com/tr4psec" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
@@ -51,11 +53,10 @@ This website is my personal note-dump, mostly Cyber related.
 <img src=https://img.shields.io/badge/instagram-%232E87FB.svg?&style=for-the-badge&logo=instagram&logoColor=orange
  alt=linkedin style="margin-bottom: 5px;" />
 </a>
-</div>  
-
-</div>
 
 
+<br>
+<br>
 
 <br>
 
@@ -66,23 +67,18 @@ This website is my personal note-dump, mostly Cyber related.
 
 <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/48/external-forensics-police-flaticons-lineal-color-flat-icons-3.png"/> <img src="https://img.icons8.com/dusk/48/hacking.png"/> <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/48/external-firewall-cybersecurity-and-data-privacy-parzival-1997-outline-color-parzival-1997.png">
 
-<br>
-
-## GitHub Stats 📈 :
+[<img src="https://images.credly.com/size/110x110/images/7148df07-dff6-44c7-a39e-1db1e295a138/Template_GCFA.png" width="80">](https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url) [<img src="https://images.credly.com/size/110x110/images/3951004e-93d8-4d99-8ba7-441b7b709454/Template_GPEN.png" width="80">](https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url)
 
 <br>
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Tr4pSec&theme=algolia&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats) [![Tr4pSec GitHub stats](https://github-readme-stats.vercel.app/api?username=Tr4pSec&theme=algolia)](https://github.com/Tr4pSec/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Tr4pSec&theme=algolia)](https://github.com/Tr4pSec/github-readme-stats) 
-<br>
-
-## GitHub Thropies 🏆 :
+## <img src="https://media0.giphy.com/media/TBf2czxR420jCORE0o/giphy.gif?cid=ecf05e470b86naywa55090ja49rf1a4o2j1gjvto0gil362f&rid=giphy.gif" width ="25"><b> GitHub stats</b>
 
 <br>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=Tr4pSec)](https://github.com/Tr4pSec/github-profile-trophy)
-
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Tr4pSec&theme=algolia)](https://github.com/Tr4pSec/github-readme-stats) 
 <br>
 
+#
 
 ---
 
