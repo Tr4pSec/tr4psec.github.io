@@ -7,7 +7,10 @@
 
 This website is my personal note-dump, mostly Cyber related. 
 
-## About Me 🕵️:
+
+## <picture><img src = "https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width = 50px></picture> **About me**
+
+<picture> <img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width = 250px></picture>
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
 - 🏢 Former **Security Incident Handler** at [KONGSBERG Gruppen](https://www.kongsberg.com/)
@@ -15,7 +18,13 @@ This website is my personal note-dump, mostly Cyber related.
 - 🎓 GIAC Penetration Tester [Badge](https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url)
 - 🏡 Lives in **Norway**
 - 🛡️ [BlueTeamLabs Profile](https://blueteamlabs.online/public/user/tr4psec)
-- <img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
+
+<img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
+
+<br><br>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
+
 
 
 <br>
@@ -32,8 +41,7 @@ This website is my personal note-dump, mostly Cyber related.
 
 <br>
 
-## What I am Good at 🧑‍💻 :
-
+## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Skills</b>
 <br>
 
 <img src="https://img.icons8.com/color/48/powershell.png"/> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg?20170816142847" width="100"/> <img src="https://img.icons8.com/color/48/microsoft.png"/> <img src="https://img.icons8.com/color/48/linux.png"/>  <img src="https://img.icons8.com/color/48/windows-defender.png"/>
