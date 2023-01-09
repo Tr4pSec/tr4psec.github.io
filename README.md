@@ -8,10 +8,10 @@
 This website is my personal note-dump, mostly Cyber related. 
 
 
-## <picture> <img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50px></picture>**About me**
+## <img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50px> About me
 
 
-<picture><img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px> </picture>
+<img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px>
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
 - 🏢 Former **Security Incident Handler** at [KONGSBERG Gruppen](https://www.kongsberg.com/)
