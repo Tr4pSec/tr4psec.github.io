@@ -33,11 +33,29 @@ This website is my personal note-dump, mostly Cyber related.
 
 <br>
 
-## Connect with me ☕ :
+## Connect with me
+<div align="center">
+<a href="https://github.com/tr4psec" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://twitter.com/tr4psec" target="_blank">
+<img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.facebook.com/shotbymaximilian" target="_blank">
+<img src=https://img.shields.io/badge/facebook-%232E87FB.svg?&style=for-the-badge&logo=facebook&logoColor=white alt=facebook style="margin-bottom: 5px;" />
+</a>  
+<a href="https://www.linkedin.com/in/maximilian-l%C3%A6rum-483033113" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.instagram.com/illekreativ" target="_blank">
+<img src=https://img.shields.io/badge/instagram-%232E87FB.svg?&style=for-the-badge&logo=instagram&logoColor=orange
+ alt=linkedin style="margin-bottom: 5px;" />
+</a>
+</div>  
 
-<br>
+</div>
 
-[![@illekreativ](https://img.icons8.com/fluency/48/000000/instagram-new.png "Instagram")](https://www.instagram.com/@illekreativ/) [![Facebook](https://img.icons8.com/fluency/48/000000/facebook.png "@shotbymaximilian")](https://www.facebook.com/shotbymaximilian/) [![@anushkawijegoonawardana97](https://img.icons8.com/fluency/48/000000/linkedin.png "LinkedIn")](https://www.linkedin.com/in/maximilian-l%C3%A6rum-483033113/) [![Twitter](https://img.icons8.com/fluency/48/000000/twitter-squared.png "@Tr4pSec")](https://twitter.com/Tr4pSec) 
+
 
 <br>
 
