@@ -7,11 +7,11 @@
 
 This website is my personal note-dump, mostly Cyber related. 
 
-<div>
-## <img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50px>**About me**
+
+## <picture> <img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50px></picture>**About me**
 
 
-<img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px>
+<picture><img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250px> </picture>
 
 - 🏢 I am currently working as a **Cyber Security Specialist** at [KLP](https://www.klp.no)
 - 🏢 Former **Security Incident Handler** at [KONGSBERG Gruppen](https://www.kongsberg.com/)
@@ -21,7 +21,6 @@ This website is my personal note-dump, mostly Cyber related.
 - 🛡️ [BlueTeamLabs Profile](https://blueteamlabs.online/public/user/tr4psec)
 
 <img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
-</div>
 
 <br>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
