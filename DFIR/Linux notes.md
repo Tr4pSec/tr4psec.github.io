@@ -41,3 +41,18 @@ Parsing .gz logs:
 zcat *.gz
 ```
 
+Parsing Audit log:
+```
+cat audit.log | egrep EXECVE
+```
+
+```
+sudo aureport -x -if audit.log | cut -d " " -f 4
+```
+
+```
+sudo aureport -x -if audit.log | cut -d " " -f 4 | sort -u
+```
+```
+sudo aureport  --tty -if audit.log
+```
