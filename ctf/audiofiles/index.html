@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726758864594">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726758921108">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>AudioFiles</title>
-    <meta name="title" content="AudioFiles">
+    <title>Audio Files</title>
+    <meta name="title" content="Audio Files">
+    <meta name="description" content="Python Script for extracting data from audio streams: Ref https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.cyberbin.io/ctf/audiofiles/" />
@@ -18,20 +19,23 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cyberbin.io/ctf/audiofiles/">
-    <meta property="og:title" content="AudioFiles">
+    <meta property="og:title" content="Audio Files">
+    <meta property="og:description" content="Python Script for extracting data from audio streams: Ref https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.cyberbin.io/ctf/audiofiles/">
-    <meta property="twitter:title" content="AudioFiles">
+    <meta property="twitter:title" content="Audio Files">
+    <meta property="twitter:description" content="Python Script for extracting data from audio streams: Ref https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.726758864594" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.726758921108" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726758864594" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726758921108" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726758864594" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726758921108" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.726758921108" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -175,12 +179,37 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="audiofiles" class="break-words">
+<doc-anchor-target id="audio-files" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#audiofiles">#</doc-anchor-trigger>
-        <span>AudioFiles</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#audio-files">#</doc-anchor-trigger>
+        <span>Audio Files</span>
     </h1>
 </doc-anchor-target>
+<p>Python Script for extracting data from audio streams:
+Ref <a href="https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3">https://medium.com/analytics-vidhya/get-secret-message-from-audio-file-8769421205c3</a></p>
+<p><code v-pre>python3 ./test.py</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-python"><code v-pre class="language-python">import wave
+import struct
+wav = wave.open(&quot;file.wav&quot;, mode='rb')
+frame_bytes = bytearray(list(wav.readframes(wav.getnframes())))
+shorts = struct.unpack('H'*(len(frame_bytes)//2), frame_bytes)
+
+extracted_left = shorts[::2] 
+extracted_right = shorts[1::2]
+
+extractedLSB = &quot;&quot;
+for i in range(0, len(extracted_left)):
+    extractedLSB += (str(extracted_left[i] &amp; 1)) if i%2==0 else(str(extracted_right[i] &amp; 1))
+    
+string_blocks = (extractedLSB[i:i+8] for i in range(0, len(extractedLSB), 8))
+decoded = ''.join(chr(int(char, 2)) for char in string_blocks)
+print(decoded[0:500])
+
+wav.close()</code></pre>
+</doc-codeblock></div>
+<p>Morse Code Decoder:
+<a href="https://morsecode.world/international/decoder/audio-decoder-expert.html">https://morsecode.world/international/decoder/audio-decoder-expert.html</a></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -247,6 +276,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "AudioFiles", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Audio Files", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
