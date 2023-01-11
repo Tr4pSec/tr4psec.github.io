@@ -9,24 +9,21 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Objects in PowerShell</title>
-    <meta name="title" content="Objects in PowerShell">
-    <meta name="description" content="PowerShell is full of objects. And dealing with different types of objects is something you'll spend a lot of time doing if you want to get into..." />
+    <title>Stego</title>
+    <meta name="title" content="Stego">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.cyberbin.io/powershell/objects_in_powershell/" />
+    <link rel="canonical" href="https://www.cyberbin.io/ctf/stego/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cyberbin.io/powershell/objects_in_powershell/">
-    <meta property="og:title" content="Objects in PowerShell">
-    <meta property="og:description" content="PowerShell is full of objects. And dealing with different types of objects is something you'll spend a lot of time doing if you want to get into...">
+    <meta property="og:url" content="https://www.cyberbin.io/ctf/stego/">
+    <meta property="og:title" content="Stego">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cyberbin.io/powershell/objects_in_powershell/">
-    <meta property="twitter:title" content="Objects in PowerShell">
-    <meta property="twitter:description" content="PowerShell is full of objects. And dealing with different types of objects is something you'll spend a lot of time doing if you want to get into...">
+    <meta property="twitter:url" content="https://www.cyberbin.io/ctf/stego/">
+    <meta property="twitter:title" content="Stego">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -178,57 +175,12 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="objects-in-powershell" class="break-words">
+<doc-anchor-target id="stego" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#objects-in-powershell">#</doc-anchor-trigger>
-        <span>Objects in PowerShell</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#stego">#</doc-anchor-trigger>
+        <span>Stego</span>
     </h1>
 </doc-anchor-target>
-<p>PowerShell is full of objects. And dealing with different types of objects is something you&#x27;ll spend a lot of time doing if you want to get into PowerShell.</p>
-<p>But what really are objects in PowerShell? The answer is &quot;pretty much everything&quot;.</p>
-<p>Every command you run in PowerShell returns an object, or an array of objects. If you don&#x27;t know what an array is, it&#x27;s basically a data type that contains a group of objects. You have tons of different types of objects. Don&#x27;t think too hard about different object types, just know that every &quot;type&quot; of object is different. I&#x27;ll show you how to check what kind of object you&#x27;re dealing with.</p>
-<p>So, every time you run a command in PowerShell, it returns an object. And that object has an object-type, properties and methods. Properties is something that describes the object, methods are &quot;actions&quot; or code that you can execute against the object.</p>
-<p>Time for an example! Let&#x27;s create a variable called test and then assign a string to that variable:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test = &quot;This is a string.&quot; </code></pre>
-</doc-codeblock></div>
-<p>Now if we just run <code v-pre>$Test</code> in our Shell, PowerShell returns &quot;This is a string.&quot;.</p>
-<img class="alignnone size-full wp-image-46" src="https://tr4psec.files.wordpress.com/2018/06/teststring.png" width="284" height="139" />
-<p>Now I&#x27;m going to show you the most important command of them all:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Get-Member </code></pre>
-</doc-codeblock></div>
-<p>When you pipe something into <code v-pre>Get-Member</code>, PowerShell is gonna spit out what type of object you&#x27;re dealing with, all the methods, and all the properties of the object.</p>
-<p>So let&#x27;s pipe our <code v-pre>$Test</code> variable into <code v-pre>Get-Member</code> and see what we&#x27;re dealing with:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test | Get-Member </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-47" src="https://tr4psec.files.wordpress.com/2018/06/testgm.png" width="695" height="262" />
-<p>First thing we see is the <code v-pre>TypeName</code>. This is basically telling you what type of object you&#x27;re dealing with. A <code v-pre>System.String object</code>. Or just a String object for short.</p>
-<p>Next <code v-pre>Get-Member</code> lists all the Methods and Properties of the object.</p>
-<img class="alignnone size-full wp-image-48" src="https://tr4psec.files.wordpress.com/2018/06/testgm2.png" width="311" height="962" />
-<p>So let&#x27;s first focus on the Properties of our String Object. As you can see in the very long list above, this object only has one Property: <code v-pre>Length</code>. You can invoke properties by writing:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test.Length </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-49" src="https://tr4psec.files.wordpress.com/2018/06/lenght.png" width="195" height="105" />
-<p>Methods are invoked the same way, but they end with a <code v-pre>( )</code> after the method name. Some methods require input inside the <code v-pre>( )</code>.</p>
-<p>Let&#x27;s try the <code v-pre>ToUpper</code> method:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test.ToUpper() </code></pre>
-</doc-codeblock></div>
-<img class="alignnone size-full wp-image-50" src="https://tr4psec.files.wordpress.com/2018/06/toupper.png" width="224" height="208" />
-<p>See what our <code v-pre>ToUpper</code> method did to our string?</p>
-<p>Now listen, calling a method on a object does not change the object itself. It merely outputs a new modified version of the object. That means if you run <code v-pre>$Test</code> again after previously running the <code v-pre>ToUpper</code> method, you&#x27;ll see that your string remains unchanged.</p>
-<p>If your goal was to actually change the object stored in the <code v-pre>$Test</code> variable, you would have to declare it again like this:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">$Test = $Test.ToUpper() </code></pre>
-</doc-codeblock></div>
-<p>Now your <code v-pre>$Test</code> would look a bit different:</p>
-<img class="alignnone size-full wp-image-51" src="https://tr4psec.files.wordpress.com/2018/06/touppernew.png" width="267" height="210" />
-<p>Using <code v-pre>Get-Help </code>and <code v-pre>Get-Command </code>from my previous post Discover commands combined with looking at the Object type, properties and methods using <code v-pre>Get-Member </code>should make you a pretty great PowerShell explorer!</p>
-<p>This is my first time trying to explain objects in PowerShell in writing. If any of this didn&#x27;t make sense, please let me know! I&#x27;ll answer any question you might have on Twitter!</p>
-<p>// Tr4p</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -238,20 +190,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/how_to_create_pscustomobject/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ctf/jwt-tokens/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">How to create a PS​Custom​Object</span>
+                                                <span class="block mt-1">JWT Tokens</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../powershell/azure/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../dfir/autopsy/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Using the Azure module in Power​Shell</span>
+                                                <span class="block mt-1">Autopsy</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -295,6 +247,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Objects in PowerShell", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Stego", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
