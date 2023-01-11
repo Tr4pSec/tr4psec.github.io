@@ -9,34 +9,32 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>README</title>
-    <meta name="title" content="README">
-    <meta name="description" content="GitHub followers GitHub User's stars Visitor" />
+    <title>JWT Tokens</title>
+    <meta name="title" content="JWT Tokens">
+    <meta name="description" content="Decode tokens: https://jwt.io/" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.cyberbin.io/" />
+    <link rel="canonical" href="https://www.cyberbin.io/ctf/jwt-tokens/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cyberbin.io/">
-    <meta property="og:title" content="README">
-    <meta property="og:description" content="GitHub followers GitHub User's stars Visitor">
-    <meta property="og:image" content="https://img.shields.io/github/followers/Tr4pSec?style=social">
+    <meta property="og:url" content="https://www.cyberbin.io/ctf/jwt-tokens/">
+    <meta property="og:title" content="JWT Tokens">
+    <meta property="og:description" content="Decode tokens: https://jwt.io/">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cyberbin.io/">
-    <meta property="twitter:title" content="README">
-    <meta property="twitter:description" content="GitHub followers GitHub User's stars Visitor">
-    <meta property="twitter:image" content="https://img.shields.io/github/followers/Tr4pSec?style=social">
+    <meta property="twitter:url" content="https://www.cyberbin.io/ctf/jwt-tokens/">
+    <meta property="twitter:title" content="JWT Tokens">
+    <meta property="twitter:description" content="Decode tokens: https://jwt.io/">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="resources/css/retype.css?v=2.4.0.726749736719" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.726749736719" rel="stylesheet" />
 
-    <script type="text/javascript" src="resources/js/config.js?v=2.4.0.726749736719" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="resources/js/lunr.js?v=2.4.0.726749736719" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726749736719" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726749736719" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -51,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Max</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -180,95 +178,46 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="readme" class="break-words">
+<doc-anchor-target id="jwt-tokens" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#readme">#</doc-anchor-trigger>
-        <span>README</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#jwt-tokens">#</doc-anchor-trigger>
+        <span>JWT Tokens</span>
     </h1>
 </doc-anchor-target>
-<div align="center" width="50">
-    <img alt="CyberBin.io" src="https://cdn-icons-png.flaticon.com/512/2092/2092654.png" width="100"/>
-</div>
-<h1 align="center">Hi <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">, I'm Max </h1>
-<p><img src="https://img.shields.io/github/followers/Tr4pSec?style=social" alt="GitHub followers" /> <img src="https://img.shields.io/github/stars/Tr4pSec?style=social" alt="GitHub User's stars" /> <img src="https://visitor-badge.laobi.icu/badge?page_id=Tr4pSec.tr4psec.github.io" alt="Visitor" /> <img src="https://komarev.com/ghpvc/?username=Tr4pSec" alt="Tr4pSec" /></p>
-<p>This website is my personal note-dump, mostly Cyber related.</p>
-<doc-anchor-target id="about-me">
+<p>Decode tokens:
+<a href="https://jwt.io/">https://jwt.io/</a></p>
+<p>Tokens contain Header.Payload.Signature</p>
+<p>Header = Name, Alg</p>
+<p>Payload = Data</p>
+<p>Signature = Secret</p>
+<br>
+<doc-anchor-target id="crunch-charset">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#about-me">#</doc-anchor-trigger>
-        <span><img src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/about_me.gif" width=50> About me</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#crunch-charset">#</doc-anchor-trigger>
+        <span>Crunch charset:</span>
     </h2>
 </doc-anchor-target>
-<img align="right" src="https://raw.githubusercontent.com/Tr4pSec/tr4psec.github.io/master/.pictures/Right_Side.gif" width=250>
-<ul>
-<li><span class="docs-emoji">&#x1F3E2;</span> I am currently working as a <strong>Cyber Security Specialist</strong> at <a href="https://www.klp.no">KLP</a></li>
-<li><span class="docs-emoji">&#x1F3E2;</span> Former <strong>Security Incident Handler</strong> at <a href="https://www.kongsberg.com/">KONGSBERG Gruppen</a></li>
-<li><span class="docs-emoji">&#x1F393;</span> GIAC Certified Forensic Analyst <a href="https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url">Badge</a></li>
-<li><span class="docs-emoji">&#x1F393;</span> GIAC Penetration Tester <a href="https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url">Badge</a></li>
-<li><span class="docs-emoji">&#x1F3E1;</span> Lives in <strong>Norway</strong></li>
-<li><span class="docs-emoji">&#x1F6E1;&#xFE0F;</span> <a href="https://blueteamlabs.online/public/user/tr4psec">BlueTeamLabs Profile</a></li>
-</ul>
-<img src="https://www.hackthebox.eu/badge/image/134841" alt="Hack The Box">
-<br>
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
-<br>
-<br>
-<br>
-<div align="center">
-<doc-anchor-target id="connect-with-me">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /usr/share/crunch/charset.lst</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="creating-a-wordlist-with-crunch">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#connect-with-me">#</doc-anchor-trigger>
-        <span><img src="https://media3.giphy.com/media/2jarCOmpRRKd5PpB7i/giphy.gif?cid=ecf05e474hlf6juyfl6k0y9lfihvcnvoi3bzq3dquipwtcer&rid=giphy.gif" width ="25"><b> Connect with me</b></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-a-wordlist-with-crunch">#</doc-anchor-trigger>
+        <span>Creating a wordlist with Crunch:</span>
     </h2>
 </doc-anchor-target>
-<hr />
-<br>
-<a href="https://github.com/tr4psec" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
-</a>
-<a href="https://twitter.com/tr4psec" target="_blank">
-<img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.facebook.com/shotbymaximilian" target="_blank">
-<img src=https://img.shields.io/badge/facebook-%232E87FB.svg?&style=for-the-badge&logo=facebook&logoColor=white alt=facebook style="margin-bottom: 5px;" />
-</a>  
-<a href="https://www.linkedin.com/in/maximilian-l%C3%A6rum-483033113" target="_blank">
-<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>
-<a href="https://www.instagram.com/illekreativ" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%232E87FB.svg?&style=for-the-badge&logo=instagram&logoColor=orange
- alt=linkedin style="margin-bottom: 5px;" />
-</a>
-<br>
-<br>
-<br>
-<doc-anchor-target id="skills">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">sudo crunch 4 4 -f charset.lst mixalpha-numeric-all -o wordlist.txt</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="cracking-the-token-with-wordlist">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#skills">#</doc-anchor-trigger>
-        <span><img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"><b> Skills</b></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cracking-the-token-with-wordlist">#</doc-anchor-trigger>
+        <span>Cracking the token with wordlist:</span>
     </h2>
 </doc-anchor-target>
-<hr />
-<br>
-<p><img src="https://img.icons8.com/color/48/powershell.png"/> <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg?20170816142847" width="100"/> <img src="https://img.icons8.com/color/48/microsoft.png"/> <img src="https://img.icons8.com/color/48/linux.png"/>  <img src="https://img.icons8.com/color/48/windows-defender.png"/></p>
-<p><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/48/external-forensics-police-flaticons-lineal-color-flat-icons-3.png"/> <img src="https://img.icons8.com/dusk/48/hacking.png"/> <img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/48/external-firewall-cybersecurity-and-data-privacy-parzival-1997-outline-color-parzival-1997.png"></p>
-<p><a href="https://www.credly.com/badges/cfb15015-62be-4fe5-a84a-757404c32c96/public_url"><img src="https://images.credly.com/size/110x110/images/7148df07-dff6-44c7-a39e-1db1e295a138/Template_GCFA.png" width="80"></a> <a href="https://www.credly.com/badges/9c99b356-239a-4019-bbea-3e33cd9c87b2/public_url"><img src="https://images.credly.com/size/110x110/images/3951004e-93d8-4d99-8ba7-441b7b709454/Template_GPEN.png" width="80"></a></p>
-<br>
-<doc-anchor-target id="github-stats">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#github-stats">#</doc-anchor-trigger>
-        <span><img src="https://media0.giphy.com/media/TBf2czxR420jCORE0o/giphy.gif?cid=ecf05e470b86naywa55090ja49rf1a4o2j1gjvto0gil362f&rid=giphy.gif" width ="25"><b> GitHub stats</b></span>
-    </h2>
-</doc-anchor-target>
-<hr />
-<br>
-<p><figure class="content-center">
-    <a href="https://github.com/Tr4pSec/github-readme-stats">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tr4pSec&amp;theme=algolia" alt="Top Langs" />
-    </a>
-    <figcaption class="caption">Top Langs</figcaption>
-</figure>
-<br></p>
-<hr />
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">hashcat -m 16500 -a 0 token.txt wordlist.txt</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -278,13 +227,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ctf/hackthebox/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Hack​The​Box</span>
+                                            </span>
+                                        </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="ctf/blueteamlabs/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../dfir/autopsy/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Blue​Team​Labs</span>
+                                                <span class="block mt-1">Autopsy</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -328,6 +284,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "README", isRoot: true, level: 0, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "JWT Tokens", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
