@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726753361415">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.726758864594">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -11,6 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Stego</title>
     <meta name="title" content="Stego">
+    <meta name="description" content="https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/steganography" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://www.cyberbin.io/ctf/stego/" />
@@ -19,19 +20,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cyberbin.io/ctf/stego/">
     <meta property="og:title" content="Stego">
+    <meta property="og:description" content="https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/steganography">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.cyberbin.io/ctf/stego/">
     <meta property="twitter:title" content="Stego">
+    <meta property="twitter:description" content="https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/steganography">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.726753361415" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.726758864594" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726753361415" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.726758864594" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726753361415" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.726758864594" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -181,6 +184,31 @@
         <span>Stego</span>
     </h1>
 </doc-anchor-target>
+<p><a href="https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/steganography">https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/steganography</a></p>
+<p>Cracking steg:
+<a href="https://github.com/Paradoxis/StegCracker">https://github.com/Paradoxis/StegCracker</a></p>
+<p>Install:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">$ pip3 install stegcracker</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">$ stegcracker &lt;file&gt; [&lt;wordlist&gt;]</code></pre>
+</doc-codeblock></div>
+<p>FASTER: <a href="https://github.com/RickdeJager/stegseek">https://github.com/RickdeJager/stegseek</a></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">stegseek [stegofile.jpg] [wordlist.txt]</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">stegseek --seed [stegofile.jpg]</code></pre>
+</doc-codeblock></div>
+<p>Extracting hidden files with StegHide:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">steghide extract -sf file.jpg -p &quot;password&quot; </code></pre>
+</doc-codeblock></div>
+<p>Extracting strings:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">strings file.wav | awk 'length($0)&gt;8' </code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
